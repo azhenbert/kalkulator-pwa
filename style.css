@@ -1,0 +1,15 @@
+* {
+  height: 100%;
+  width:100%;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.hasil {
+  height:20%;
+}
+
+.tombol {
+  height:80%;
+  width:100%;
+}
