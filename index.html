@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="manifest" href="manifest.json">
-    <link rel="shortcut icon" type="image/png" href="img/calc.png"/>
+    <link rel="shortcut icon" type="image/png" href="touch-icons/touch-icon.png"/>
     <title>Kalkulator PWA</title>
   </head>
   <body>
@@ -16,21 +16,21 @@
       <input class="form-control form-control-lg hasil" name="input" type="text" placeholder="Kalkulator PWA by Jason" readonly>
       <div class="btn-group btn-block tombol">
         <div class="btn-group-vertical btn-group-lg" role="group">
-          <input class="btn btn-primary" type="button" value="1" onclick="input.value += '1'">
-          <input class="btn btn-primary" type="button" value="4" onclick="input.value += '4'">
           <input class="btn btn-primary" type="button" value="7" onclick="input.value += '7'">
+          <input class="btn btn-primary" type="button" value="4" onclick="input.value += '4'">
+          <input class="btn btn-primary" type="button" value="1" onclick="input.value += '1'">
           <input class="btn btn-primary" type="button" value="C" onclick="input.value = ''">
         </div>
         <div class="btn-group-vertical btn-group-lg anaktombol" role="group">
-          <input class="btn btn-primary" type="button" value="2" onclick="input.value += '2'">
-          <input class="btn btn-primary" type="button" value="5" onclick="input.value += '5'">
           <input class="btn btn-primary" type="button" value="8" onclick="input.value += '8'">
+          <input class="btn btn-primary" type="button" value="5" onclick="input.value += '5'">
+          <input class="btn btn-primary" type="button" value="2" onclick="input.value += '2'">
           <input class="btn btn-primary" type="button" value="0" onclick="input.value += '0'">
         </div>
         <div class="btn-group-vertical btn-group-lg" role="group">
-          <input class="btn btn-primary" type="button" value="3" onclick="input.value += '3'">
-          <input class="btn btn-primary" type="button" value="6" onclick="input.value += '6'">
           <input class="btn btn-primary" type="button" value="9" onclick="input.value += '9'">
+          <input class="btn btn-primary" type="button" value="6" onclick="input.value += '6'">
+          <input class="btn btn-primary" type="button" value="3" onclick="input.value += '3'">
           <input class="btn btn-success" type="button" value="=" onclick="input.value = eval(input.value)">
         </div>
         <div class="btn-group-vertical btn-group-lg" role="group">
@@ -41,5 +41,18 @@
         </div>
       </div>
     </form>
+    <script>
+      if ('serviceWorker' in navigator) {
+      	window.addEventListener('load', function() {
+      		navigator.serviceWorker.register('sw.js').then(function(registration) {
+      			// Registration was successful
+      			console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      		}, function(err) {
+      			// registration failed :(
+      			console.log('ServiceWorker registration failed: ', err);
+      		});
+      	});
+      }
+  </script>
   </body>
 </html>

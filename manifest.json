@@ -3,9 +3,34 @@
   "name": "Kalkulator PWA",
   "icons": [
     {
-      "src": "img/calc.png",
-      "sizes": "80x80",
-      "type": "image/png"
+      "src": "touch-icons/touch-icon-iphone.png",
+      "type": "image/png",
+      "sizes": "114x114"
+    },
+    {
+      "src": "touch-icons/touch-icon-ipad.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "touch-icons/touch-icon-ipad-retina.png",
+      "type": "image/png",
+      "sizes": "167x167"
+    },
+    {
+      "src": "touch-icons/touch-icon-iphone-retina.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "touch-icons/touch-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "splashscreens/splash-icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": "index.html",
