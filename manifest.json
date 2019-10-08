@@ -1,7 +1,6 @@
 {
-  "name": "Kalkulator PWA",
   "short_name": "Kalkulator PWA",
-  "description": "Kalkulator PWA by Jason",
+  "name": "Kalkulator PWA",
   "icons": [
     {
       "src": "img/calc.png",
@@ -9,9 +8,9 @@
       "type": "image/png"
     }
   ],
- "orientation" : "portrait",
- "theme_color": "blue",
- "background_color": "white",
- "display": "standalone",
- "start_url": "/"
+  "start_url": "index.html",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "index.html",
+  "theme_color": "#ffffff"
 }
